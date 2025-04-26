@@ -13,7 +13,7 @@ function renderTasks() {
   tasks.forEach((task, index) => {
     const li = document.createElement('li');
     li.innerHTML = `
-      <span class="${task.completed ? 'done' : ''}">${task.text}</span>
+      <span class="${task.completed ? 'done' : ''}"onclick="toggleTask(${index})">${task.text}</span>
       <div>
         
         <button onclick="deleteTask(${index})">🗑</button>
@@ -36,13 +36,13 @@ function addTask() {
 function toggleTask(index) {
   tasks[index].completed = !tasks[index].completed;
   saveTasks();
-  renderTasks();
+    renderTasks();
 }
 
 function deleteTask(index) {
   tasks.splice(index, 1);
   saveTasks();
-  renderTasks();
+    renderTasks();
 }
 
 addBtn.addEventListener('click', addTask);

@@ -1,0 +1,6 @@
+body { font-family: sans-serif; padding: 100px;}
+    .done { text-decoration: line-through; color: gray; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; justify-content: space-between; margin: 5px 0; }
+    button { margin-left: 10px; color: green;background-color: black;}
+    h1 {color: aqua;}
